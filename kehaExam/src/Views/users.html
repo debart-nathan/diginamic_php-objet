@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <header>
+            <?php
+                if($flash !== null) {
+                    echo $flash;
+                }
+            ?>
+        </header>
+        <main>
+            <h1>Users</h1>
+            <?php
+                echo '<a href="users.php?controller=users&method=loadEdit&mode=create">Créer</a>';
+            ?>
+            <h2>User list</h2>
+            <ul>
+            <?php
+                foreach ($userList as $user) {
+                    echo "<li>";
+                    echo '<span>'.$user["user"]->getName().'  '.$user["user"]->getSurname().' - id='.$user["user"]->getId() . "</span>  |  ";
+                    echo "<a href='users.php?controller=users&method=delete&id=".$user["user"]->getId()."'>Supprimer</a>  |  ";
+                    echo "<a href='users.php?controller=users&method=loadEdit&mode=edit&id=".$user["user"]->getId()."'>Éditer</a>  <br>  ";
+                    echo "<ul>";
+                    $notes =$user["notes"];
+
+                    foreach ($notes as $note){
+                        echo "<li>".$note->getNote()."</li>";
+                    }
+                    echo "</ul>";
+                    echo "</li>";
+                }
+            ?>
+        </ul>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "nath/keha",
+    "autoload": {
+        "psr-4": {
+            "Nath\\Keha\\": "src/"
+        }
+    },
+    "require": {}
+}

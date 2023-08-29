@@ -1,0 +1,10 @@
+{
+    "name": "nath/tp2",
+    "autoload": {
+        "psr-4": {
+            "Nath\\Tp2\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}

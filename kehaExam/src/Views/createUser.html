@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <header>
+            <?php
+                if($flash !== null) {
+                    echo $flash;
+                }
+            ?>
+        </header>
+        <main>
+            <h1>Users</h1>
+            <h2>Create User</h2>
+            <?php
+                echo '<form action="http://localhost:3000/?controller=users&&method='.$method.'" method="post">';
+                    if($method="edit"){
+                        echo '<input type="hidden" name="id" value="'.$id.'" />';
+                        echo "<span>Id: $id</span><br>"; 
+                    }
+                    
+            ?> 
+                <label>Surname: <input type="text" name="surname" required></label><br>
+                <label>Name: <input type="text" name="name" required></label><br>
+                <input type="submit">
+            </form>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

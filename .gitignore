@@ -1,0 +1,4 @@
+**/Config*/**
+!**/.gitignore
+!**/.gitkeep
+!**/*.ex
